@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CodeController {
 
     //This needs to modified to server file location
-    String PATH = "C:\\Users\\omarz\\Downloads\\Point32Health Code project\\demo\\2024_DHS_Code_List_Addendum_11_29_2023.xlsx";
+    String PATH = "C:\\ModifyThisPath\\2024_DHS_Code_List_Addendum_11_29_2023.xlsx";
 
     @GetMapping("/AllCodes")
     public ResponseEntity<Object> AllCodes() throws Exception{
