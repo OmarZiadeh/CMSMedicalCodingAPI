@@ -252,9 +252,9 @@ public class CodeController {
             case STRING:
                 matcher = pattern.matcher(cell.getStringCellValue());
                 if(matcher.find() && cell.getStringCellValue().trim().length() == 5){
-                    String code = cell.getStringCellValue();
+                    String code = cell.getStringCellValue().trim();
                     cell = cellIterator.next();
-                    String description = cell.getStringCellValue();
+                    String description = cell.getStringCellValue().trim();
                     json.put(code, description);    
                 }
                 break;
@@ -262,9 +262,9 @@ public class CodeController {
             case NUMERIC:
                 matcher = pattern.matcher(Integer.toString((int)cell.getNumericCellValue()));
                 if(matcher.find() && Integer.toString((int)cell.getNumericCellValue()).trim().length() == 5){
-                    String code = Integer.toString((int)cell.getNumericCellValue());
+                    String code = Integer.toString((int)cell.getNumericCellValue()).trim();
                     cell = cellIterator.next();
-                    String description = cell.getStringCellValue();
+                    String description = cell.getStringCellValue().trim();
                     json.put(code, description);
                 }
                 break;
