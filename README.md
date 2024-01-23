@@ -12,7 +12,7 @@ It specifically works with the Excel file provided by the above links.
 The program is NOT hardcoded to the Excel file, and is meant to dynamically grab any extra codes created listed under sections using a mixture of Regex and detecting title names(the title name section is hardcoded however).
 Everything is listed out in a JSON format for ease of parsing, and each code acts as a key with the description as a value.
 
-Codes have been separated depending on section or all codes can be retrieved, more information can be found in the API Link list
+Codes have been separated depending on section, all codes, or a specific code, more information can be found in the API Link list
 
 # Getting Started
 # Dependencies
@@ -25,7 +25,7 @@ All dependencies are listed in the pom.xml, for your convenience they're listed 
 - JSON Simple
 
 # Installation
-- You WILL need to change the String PATH variable listed in the "CodeController.java" file to the location of the Excel file listed at cms.gov
+- You WILL need to change the String PATH variable listed in the "Constants.java" file to the location of the Excel file listed at cms.gov
 
 # API Link list
 Full list of API links depending on localhost:
@@ -35,6 +35,7 @@ Full list of API links depending on localhost:
 - http://localhost:8080/api/RadiologyCodes
 - http://localhost:8080/api/RadiationCodes
 - http://localhost:8080/api/PreventativeCodes
+- http://localhost:8080/api/{specificCode}
   
 # Executing program
 - Execute the "MedicalCoding.java" file within the project
