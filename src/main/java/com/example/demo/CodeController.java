@@ -24,7 +24,7 @@ public class CodeController {
         return new ResponseEntity<>(json, HttpStatus.OK);
     }
 
-    @GetMapping(value="/{endPoint}")
+    @GetMapping(value="/searchCode/{endPoint}")
     public ResponseEntity<Object> getMethodName(@PathVariable String endPoint) throws Exception{
         JSONObject json = new JSONObject();
 
@@ -32,8 +32,16 @@ public class CodeController {
         APIService.iterateEntireFile(json);
 
         JSONObject singleJson = new JSONObject();
-        singleJson.put(endPoint, json.get(endPoint));
 
+        if(json.get(endPoint) != null){
+            singleJson.put(endPoint, json.get(endPoint));
+        }
+        else{
+            JSONObject errorJson = new JSONObject();
+            errorJson.put("Invalid Code HTTP 400 Error", "The code " + endPoint + " does not exist");
+            return new ResponseEntity<>(errorJson, HttpStatus.BAD_REQUEST);
+        }
+        
         return new ResponseEntity<>(singleJson, HttpStatus.OK);
     }
 
