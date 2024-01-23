@@ -11,6 +11,4 @@ public final class Constants {
     public static final String RADIOLOGYANDIMAGING = "RADIOLOGY AND CERTAIN OTHER IMAGING SERVICES";
     public static final String RADIATION = "RADIATION THERAPY SERVICES AND SUPPLIES";
     public static final String PREVENTATIVE = "PREVENTIVE SCREENING TESTS AND VACCINES";
-
-
 }
