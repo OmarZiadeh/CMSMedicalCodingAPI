@@ -35,7 +35,7 @@ Full list of API links depending on localhost:
 - http://localhost:8080/api/RadiologyCodes
 - http://localhost:8080/api/RadiationCodes
 - http://localhost:8080/api/PreventativeCodes
-- http://localhost:8080/api/{specificCode}
+- http://localhost:8080/api/searchCode/{code}
   
 # Executing program
 - Execute the "MedicalCoding.java" file within the project
