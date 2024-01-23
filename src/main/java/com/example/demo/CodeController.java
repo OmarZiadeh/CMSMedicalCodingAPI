@@ -33,6 +33,7 @@ public class CodeController {
 
         JSONObject singleJson = new JSONObject();
 
+        //some basic error handling
         if(json.get(endPoint) != null){
             singleJson.put(endPoint, json.get(endPoint));
         }
