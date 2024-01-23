@@ -28,7 +28,6 @@ public class APIService {
             
             while (cellIterator.hasNext()){
                 Cell cell = cellIterator.next();
-                
 
                 if (cell.getCellType() == CellType.STRING && cell.getStringCellValue().trim().equals(title)){
                     isTitle = true;
@@ -60,7 +59,6 @@ public class APIService {
             
             while (cellIterator.hasNext()){
                 Cell cell = cellIterator.next();
-
                 APIService.findCodes(cell, cellIterator, json);
             }
         }
@@ -83,7 +81,6 @@ public class APIService {
             while (cellIterator.hasNext()){
                 Cell cell = cellIterator.next();
                 
-
                 if (cell.getCellType() == CellType.STRING && cell.getStringCellValue().trim().equals(title)){
                     isTitle = true;
                 }

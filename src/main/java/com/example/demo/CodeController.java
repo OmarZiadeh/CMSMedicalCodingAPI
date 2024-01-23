@@ -36,13 +36,12 @@ public class CodeController {
 
         return new ResponseEntity<>(singleJson, HttpStatus.OK);
     }
-    
 
     @GetMapping("/ClinicalLabCodes")
     public ResponseEntity<Object> ClinicalLabCodes() throws Exception{
         JSONObject json = new JSONObject();
-        String title = "CLINICAL LABORATORY SERVICES";
-        String endTitle = "PHYSICAL THERAPY, OCCUPATIONAL THERAPY, AND OUTPATIENT SPEECH-LANGUAGE PATHOLOGY SERVICES";
+        String title = Constants.CLINICALLAB;
+        String endTitle = Constants.THERAPYSERVICES;
 
         APIService.iterateFileTitles(title, endTitle, json);
 
@@ -52,8 +51,8 @@ public class CodeController {
     @GetMapping("/TherapyCodes")
     public ResponseEntity<Object> TherapyCodes() throws Exception{
         JSONObject json = new JSONObject();
-        String title = "PHYSICAL THERAPY, OCCUPATIONAL THERAPY, AND OUTPATIENT SPEECH-LANGUAGE PATHOLOGY SERVICES";
-        String endTitle = "RADIOLOGY AND CERTAIN OTHER IMAGING SERVICES";
+        String title = Constants.THERAPYSERVICES;
+        String endTitle = Constants.RADIOLOGYANDIMAGING;
 
         APIService.iterateFileTitles(title, endTitle, json);
 
@@ -63,8 +62,8 @@ public class CodeController {
     @GetMapping("/RadiologyCodes")
     public ResponseEntity<Object> RadiologyCodes() throws Exception{
         JSONObject json = new JSONObject();
-        String title = "RADIOLOGY AND CERTAIN OTHER IMAGING SERVICES";
-        String endTitle = "RADIATION THERAPY SERVICES AND SUPPLIES";;
+        String title = Constants.RADIOLOGYANDIMAGING;
+        String endTitle = Constants.RADIATION;
 
         APIService.iterateFileTitles(title, endTitle, json);
 
@@ -74,8 +73,8 @@ public class CodeController {
     @GetMapping("/RadiationCodes")
     public ResponseEntity<Object> RadiationCodes() throws Exception{
         JSONObject json = new JSONObject();
-        String title = "RADIATION THERAPY SERVICES AND SUPPLIES";
-        String endTitle = "PREVENTIVE SCREENING TESTS AND VACCINES";
+        String title = Constants.RADIATION;
+        String endTitle = Constants.PREVENTATIVE;
 
         APIService.iterateFileTitles(title, endTitle, json);
         
@@ -85,7 +84,7 @@ public class CodeController {
     @GetMapping("/PreventativeCodes")
     public ResponseEntity<Object> PreventativeCodes() throws Exception{
         JSONObject json = new JSONObject();
-        String title = "PREVENTIVE SCREENING TESTS AND VACCINES";
+        String title = Constants.PREVENTATIVE;
         
         APIService.iterateLastSection(title, json);
 
